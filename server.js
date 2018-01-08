@@ -22,14 +22,14 @@ app.post('/analyze', function(req, res) {
 		
 		
 app.get('/analyze', function (req, res) {
-	var stat = fs.statSync(fileName);
+	var stat = fs.statSync(fileName);	
 	if (first > stat.size) { 
 		 var countObj = {
 				 countOfA: countOfA,
 				 countOfT: countOfT,
 				 countOfG: countOfG,
 				 countOfC: countOfC
-		 };
+		 };	 
 		 res.send({
 			 statusCode: 'x',			// 'x' denotes that this is the last response.
 			 countObj: countObj
